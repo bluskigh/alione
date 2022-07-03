@@ -40,27 +40,6 @@ function checkSmallScreen() {
 
 checkSmallScreen()
 
-const details = document.querySelectorAll('details');
-function detailClicked(s, a) {
-    a.classList.toggle('arrow-rotate')
-    s.classList.toggle('details-summary-straighten')
-}
-details.forEach(detail => {
-    const arrow = detail.querySelector('.arrow');
-    const summary = detail.querySelector('summary');
-
-    if (arrow) {
-        if (detail.getAttribute('open') != null) {
-            detailClicked(summary, arrow)
-        }
-
-        summary.addEventListener('click', () => {
-            detailClicked(summary, arrow)
-        })
-    }
-})
-
-
 // applications
 
 const appContainer = document.querySelector('#app-container');
@@ -159,7 +138,6 @@ const detailsLinks = document.querySelectorAll('.details-link');
 detailsLinks.forEach(i=>{
     i.addEventListener('click', function() {
         const iDetail = document.querySelector(i.getAttribute('href'));
-        detailClicked(iDetail.querySelector('summary'), iDetail.querySelector('.arrow'))
         iDetail.open = true;
     })
 })
