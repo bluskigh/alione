@@ -1,3 +1,6 @@
+    body {
+        font-size: small;
+    }
     .up {
         left: unset !important;
         top: 100% !important;
@@ -9,6 +12,7 @@
         min-height: fit-content !important;
         width: 100% !important;
         border-right: none !important;
+        position: sticky;
     }
     #introduction h1 {
         font-size: 2.5em;

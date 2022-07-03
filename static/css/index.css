@@ -156,6 +156,9 @@ summary:hover {
 summary::marker {
     content: none;
 }
+summary::-webkit-details-marker {
+    content: none;
+}
 #questions details .details-answer {
     color: var(--black);
     margin-top: 0;
